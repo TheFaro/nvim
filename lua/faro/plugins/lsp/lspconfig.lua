@@ -68,56 +68,59 @@ typescript.setup({
 	},
 })
 
-require("lspconfig").tsserver.setup({})
-
-lspconfig["cssls"].setup({
+lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["cssmodules_ls"].setup({
+lspconfig.angularls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["tailwindcss"].setup({
+lspconfig.cssls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["angularls"].setup({
+lspconfig.cssmodules_ls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["dockerls"].setup({
+lspconfig.tailwindcss.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["quick_lint_js"].setup({
+lspconfig.dockerls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["vuels"].setup({
+lspconfig.quick_lint_js.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig.vuels.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
 -- configure emmet language server
-lspconfig["emmet_ls"].setup({
+lspconfig.emmet_ls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	filetypes = { "html", "typescript", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 })
 
-lspconfig["volar"].setup({
+lspconfig.volar.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
-lspconfig["lua_ls"].setup({
+lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = {
